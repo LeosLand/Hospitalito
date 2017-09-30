@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hospitalito</string>
+
+    <string-array name="Medicos">
+        <item>Dr. Pedro</item>
+        <item>Dr. Juan</item>
+        <item>Dr. Leonardo</item>
+        <item>Dr. Edgar</item>
+        <item>Dr. Eduardo</item>
+        <item>Dr. Antonio</item>
+        <item>Dr. Jason</item>
+        <item>Dr. Miguel</item>
+    </string-array>
+</resources>
