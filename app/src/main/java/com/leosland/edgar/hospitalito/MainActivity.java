@@ -1,5 +1,6 @@
 package com.leosland.edgar.hospitalito;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -85,5 +87,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Toast.makeText(this, "Something went embrassing", Toast.LENGTH_LONG)
                     .show();
         }
+    }
+
+    public void  toastEvent(View view){
+        String apoinment;
+        EditText name_patient = (EditText) findViewById(R.id.name_patient);
+        EditText number_patient = (EditText) findViewById(R.id.number_patient);
+        EditText email_patient = (EditText) findViewById(R.id.email_patient);
+        EditText phone_patient = (EditText) findViewById(R.id.phone_patient);
+        EditText postal_patient = (EditText) findViewById(R.id.postal_patient);
+        EditText ink_patient = (EditText) findViewById(R.id.ink_patient);
+        EditText date_date = (EditText) findViewById(R.id.date_date);
+        EditText hour_date = (EditText) findViewById(R.id.hour_date);
+        Spinner Medicos = (Spinner) findViewById(R.id.Medicos);
+
+        apoinment = "" + (name_patient.getText())
+                + "\n"+(number_patient.getText())
+                + "\n"+(email_patient.getText())
+                + "\n"+(phone_patient.getText())
+                + "\n"+(postal_patient.getText())
+                + "\n"+(ink_patient.getText())
+                + "\n"+(date_date.getText())
+                + "\n"+(hour_date.getText())
+                + "\n"+(Medicos.getSelectedItem());
+
+        Toast.makeText(this, apoinment,
+                Toast.LENGTH_LONG).show();
     }
 }
